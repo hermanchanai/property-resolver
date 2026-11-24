@@ -50,7 +50,7 @@ Each tool's docstring is its SOP. Order matters: rebuilding inputs drops the can
 
 ## Data
 
-Inputs come from the frozen snapshot of [text-to-sql-eval](https://github.com/hermanian06/text-to-sql-eval) (not distributed; see its
+Inputs come from the frozen snapshot of [text-to-sql-eval](https://github.com/hermanchanai/text-to-sql-eval) (not distributed; see its
 README) and from county-parcel tables in a private Postgres database, read through a read-only session
 (`tools/db.py` asserts `transaction_read_only = on`; the DSN comes from `SOURCE_ENV_FILE` or a gitignored
 `.env`). Neither is in this repo, so a full rebuild needs your own copy. The labels, cached LLM answers,
