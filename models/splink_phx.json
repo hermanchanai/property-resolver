@@ -1,0 +1,207 @@
+{
+  "link_type": "link_only",
+  "probability_two_random_records_match": 0.0002605175381574273,
+  "retain_matching_columns": true,
+  "retain_intermediate_calculation_columns": true,
+  "additional_columns_to_retain": [],
+  "sql_dialect": "duckdb",
+  "linker_uid": "mlhvt11v",
+  "em_convergence": 0.0001,
+  "max_iterations": 25,
+  "match_weight_column_prefix": "mw_",
+  "term_frequency_adjustment_column_prefix": "tf_",
+  "comparison_vector_value_column_prefix": "gamma_",
+  "unique_id_column_name": "unique_id",
+  "source_dataset_column_name": "source_dataset",
+  "blocking_rules_to_generate_predictions": [
+    {
+      "blocking_rule": "abs(l.lat - r.lat) < 0.0055 and abs(l.lng - r.lng) < 0.0065",
+      "sql_dialect": "duckdb"
+    },
+    {
+      "blocking_rule": "(l.\"addr_num\" = r.\"addr_num\") AND (l.\"addr_street\" = r.\"addr_street\")",
+      "sql_dialect": "duckdb"
+    },
+    {
+      "blocking_rule": "list_has_any(l.apns, r.apns)",
+      "sql_dialect": "duckdb"
+    }
+  ],
+  "comparisons": [
+    {
+      "output_column_name": "name",
+      "comparison_levels": [
+        {
+          "sql_condition": "(name1_l is null and name2_l is null) or (name1_r is null and name2_r is null)",
+          "label_for_charts": "name null",
+          "fix_m_probability": false,
+          "fix_u_probability": false,
+          "is_null_level": true
+        },
+        {
+          "sql_condition": "greatest(coalesce(jaro_winkler_similarity(name1_l, name1_r), 0), coalesce(jaro_winkler_similarity(name1_l, name2_r), 0), coalesce(jaro_winkler_similarity(name2_l, name1_r), 0), coalesce(jaro_winkler_similarity(name2_l, name2_r), 0)) >= 0.97",
+          "label_for_charts": "name jw >= 0.97",
+          "m_probability": 0.8641975308641975,
+          "u_probability": 0.00023205583620428054,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "greatest(coalesce(jaro_winkler_similarity(name1_l, name1_r), 0), coalesce(jaro_winkler_similarity(name1_l, name2_r), 0), coalesce(jaro_winkler_similarity(name2_l, name1_r), 0), coalesce(jaro_winkler_similarity(name2_l, name2_r), 0)) >= 0.90",
+          "label_for_charts": "name jw >= 0.90",
+          "m_probability": 0.012345679012345678,
+          "u_probability": 0.00025704646471858765,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "greatest(coalesce(jaro_winkler_similarity(name1_l, name1_r), 0), coalesce(jaro_winkler_similarity(name1_l, name2_r), 0), coalesce(jaro_winkler_similarity(name2_l, name1_r), 0), coalesce(jaro_winkler_similarity(name2_l, name2_r), 0)) >= 0.80",
+          "label_for_charts": "name jw >= 0.80",
+          "u_probability": 0.0028328662465861017,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "ELSE",
+          "label_for_charts": "All other comparisons",
+          "m_probability": 0.12345679012345678,
+          "u_probability": 0.996678031452491,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        }
+      ],
+      "comparison_description": "CustomComparison"
+    },
+    {
+      "output_column_name": "location",
+      "comparison_levels": [
+        {
+          "sql_condition": "(addr_street_l is null or addr_street_r is null or addr_num_l is null or addr_num_r is null) and (lat_l is null or lat_r is null)",
+          "label_for_charts": "location null",
+          "fix_m_probability": false,
+          "fix_u_probability": false,
+          "is_null_level": true
+        },
+        {
+          "sql_condition": "addr_num_l = addr_num_r and addr_street_l = addr_street_r",
+          "label_for_charts": "exact number + street",
+          "m_probability": 0.8313253012048193,
+          "u_probability": 0.00020009554950270827,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "addr_street_l = addr_street_r and abs(addr_num_l - addr_num_r) <= 150 and addr_parity_l = addr_parity_r and coalesce((2 * 6371 * asin(sqrt(power(sin(radians(lat_r - lat_l) / 2), 2) + cos(radians(lat_l)) * cos(radians(lat_r)) * power(sin(radians(lng_r - lng_l) / 2), 2)))), 0) <= 0.15",
+          "label_for_charts": "same street, same side, <= 150 m",
+          "m_probability": 0.060240963855421686,
+          "u_probability": 3.722707897724805e-05,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "addr_street_l = addr_street_r and abs(addr_num_l - addr_num_r) <= 150 and addr_parity_l <> addr_parity_r",
+          "label_for_charts": "same street, opposite side",
+          "m_probability": 0.012048192771084338,
+          "u_probability": 0.00012667547707535795,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "(2 * 6371 * asin(sqrt(power(sin(radians(lat_r - lat_l) / 2), 2) + cos(radians(lat_l)) * cos(radians(lat_r)) * power(sin(radians(lng_r - lng_l) / 2), 2)))) <= 0.05",
+          "label_for_charts": "<= 50 m, address differs",
+          "m_probability": 0.012048192771084338,
+          "u_probability": 2.0681710542915583e-06,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "(2 * 6371 * asin(sqrt(power(sin(radians(lat_r - lat_l) / 2), 2) + cos(radians(lat_l)) * cos(radians(lat_r)) * power(sin(radians(lng_r - lng_l) / 2), 2)))) <= 0.15",
+          "label_for_charts": "<= 150 m, address differs",
+          "m_probability": 0.03614457831325301,
+          "u_probability": 5.997696057445519e-05,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "(2 * 6371 * asin(sqrt(power(sin(radians(lat_r - lat_l) / 2), 2) + cos(radians(lat_l)) * cos(radians(lat_r)) * power(sin(radians(lng_r - lng_l) / 2), 2)))) <= 0.5 or (addr_street_l = addr_street_r and abs(addr_num_l - addr_num_r) <= 150)",
+          "label_for_charts": "<= 500 m or same street",
+          "m_probability": 0.04819277108433735,
+          "u_probability": 0.0008701829710931732,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "ELSE",
+          "label_for_charts": "All other comparisons",
+          "u_probability": 0.9987037737917228,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        }
+      ],
+      "comparison_description": "CustomComparison"
+    },
+    {
+      "output_column_name": "apn",
+      "comparison_levels": [
+        {
+          "sql_condition": "apns_l is null or apns_r is null",
+          "label_for_charts": "apn null",
+          "fix_m_probability": false,
+          "fix_u_probability": false,
+          "is_null_level": true
+        },
+        {
+          "sql_condition": "list_has_any(apns_l, apns_r)",
+          "label_for_charts": "shares an APN",
+          "m_probability": 1.0,
+          "u_probability": 0.0003825488184458085,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "ELSE",
+          "label_for_charts": "All other comparisons",
+          "u_probability": 0.9996174511815542,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        }
+      ],
+      "comparison_description": "CustomComparison"
+    },
+    {
+      "output_column_name": "units",
+      "comparison_levels": [
+        {
+          "sql_condition": "units_l is null or units_r is null or units_l = 0 or units_r = 0",
+          "label_for_charts": "units null",
+          "fix_m_probability": false,
+          "fix_u_probability": false,
+          "is_null_level": true
+        },
+        {
+          "sql_condition": "least(units_l, units_r) / greatest(units_l, units_r) >= 0.95",
+          "label_for_charts": "ratio >= 0.95",
+          "m_probability": 1.0,
+          "u_probability": 0.034625852830971644,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "least(units_l, units_r) / greatest(units_l, units_r) >= 0.75",
+          "label_for_charts": "ratio >= 0.75",
+          "u_probability": 0.15782407576922608,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        },
+        {
+          "sql_condition": "ELSE",
+          "label_for_charts": "All other comparisons",
+          "u_probability": 0.8075500713998023,
+          "fix_m_probability": false,
+          "fix_u_probability": false
+        }
+      ],
+      "comparison_description": "CustomComparison"
+    }
+  ]
+}

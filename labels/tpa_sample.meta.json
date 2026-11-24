@@ -1,0 +1,21 @@
+{
+  "population": {
+    "near_miss": 1158,
+    "apn_conflict": 268,
+    "near_dissimilar": 85,
+    "easy": 46,
+    "apn_far": 28,
+    "other": 19
+  },
+  "sampled": {
+    "near_dissimilar": 18,
+    "easy": 12,
+    "near_miss": 10,
+    "apn_conflict": 5,
+    "apn_far": 5,
+    "other": 2
+  },
+  "seed": 20261122,
+  "scale": 0.25,
+  "test_only": true
+}

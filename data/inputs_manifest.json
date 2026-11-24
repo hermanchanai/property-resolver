@@ -1,0 +1,25 @@
+{
+  "built_at": "2026-11-23T17:54:30+00:00",
+  "snapshot": "../text-to-sql-eval/snapshot/cre_snapshot.duckdb",
+  "snapshot_md5_of_path_size": "015c3d5a55c7d95bc6fee00c7c8180b2",
+  "community_match_run": "2026-10-05-q2",
+  "counts": {
+    "altkey_map_fl_hillsborough": 528132,
+    "county_parcel_PHX": 3367,
+    "county_parcel_12057": 7421,
+    "county_parcel_12103": 1148,
+    "county_parcel_12101": 1208,
+    "county_parcel_12053": 372,
+    "rent_community_PHX": 2783,
+    "rent_community_TPA": 1199,
+    "sold_property_PHX": 1231,
+    "sold_property_TPA": 1332,
+    "sold_property_apn_PHX": 5594,
+    "sold_property_apn_TPA": 10864,
+    "community_parcel_PHX": 1352,
+    "community_parcel_TPA": 7335,
+    "county_parcel_TPA": 10149,
+    "permit_PHX": 22300,
+    "permit_TPA": 9059
+  }
+}

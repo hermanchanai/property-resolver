@@ -1,0 +1,53 @@
+i,draft,sure,why
+0,match,y,"same name, exact address, 264 units / 2000 both sides; APN conflict = folio vs PIN"
+1,match,y,"same name, 78 m, 343 vs 326 units, 2001 both"
+2,non_match,y,1661 vs 1701 Central Ave; 1701 Central matches its own sold record exactly (row 39)
+3,match,y,"same name, exact address, 2008 both"
+4,match,y,"same name, 31 m, 180 units 1974 both"
+5,match,y,"shared APN, same address, 336 units 1971 both - rename"
+6,match,y,"shared APN, same name and address"
+7,match,y,"shared APN, same name"
+8,match,y,shared APN; second phase record (125 of 285 county units) - Herman phase policy
+9,match,y,"shared APNs, same name/address"
+10,match,y,"shared APN, same name/address"
+11,match,y,same
+12,match,y,same
+13,match,y,same
+14,non_match,y,"930 vs 1010 Central Ave, different buildings"
+15,match,y,"shared APN, exact address"
+16,match,y,"shared APN, exact address"
+17,match,y,same
+18,match,y,same
+19,match,y,same
+20,match,y,same
+21,match,y,same
+22,match,y,exact address; unnamed sold record 118 units 1982
+23,non_match,y,4-unit 1920 building elsewhere
+24,non_match,y,"The Henry vs AVE Tampa Riverwalk, different buildings"
+25,non_match,y,different address
+26,non_match,y,different street/city
+27,non_match,y,4-unit 1935 building
+28,non_match,y,different streets
+29,non_match,y,different addresses
+30,match,n,two rent communities at 4108 George Rd; this sold record also matches Brooke at Rocky Point
+31,match,y,"3 m apart, 1250 vs 1252 E 113th Ave same side, unit address of a 407-unit complex"
+32,match,n,"4102 vs 4101 Oak Knoll Ct, 13 m, opposite sides of a court; 260 units 1974"
+33,non_match,y,"different street, 139 m"
+34,match,y,"shared APN, exact address, 200 units 2001 - rename"
+35,match,y,"shared APN, exact address"
+36,non_match,y,40 units elsewhere
+37,match,y,"shared APN, 517 units 1974 both"
+38,non_match,y,96-unit 2013 condo on another street
+39,match,y,"shared APN, exact address, 243 units 2020"
+40,non_match,y,10-unit 1923
+41,non_match,y,12 units elsewhere
+42,non_match,y,only 'Ybor' shared; different streets 198 m
+43,non_match,y,11 units elsewhere
+44,non_match,y,"different properties, APNs disagree"
+45,match,y,"same name, exact address"
+46,non_match,y,Westshore Flats vs Residences at Westshore Marina
+47,non_match,y,different street
+48,non_match,y,"different street, APNs disagree"
+49,non_match,y,different properties
+50,match,y,"16 shared APNs, exact address"
+51,match,y,"exact address, 444 units 1986 both; APN conflict = folio vs PIN"

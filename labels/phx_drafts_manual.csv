@@ -1,0 +1,71 @@
+i,draft,sure,why
+0,non_match,y,opposite sides of N Mesa Dr (1233 vs 1230); county names differ (Moorings at Mesa Cove vs Woodstream Village); 406 vs 156 units
+1,non_match,y,454 m apart; county names differ; 182 vs 25 units
+3,non_match,y,different streets and county names
+4,non_match,y,county names differ (Commons at Papago Park vs Villas at Papago); 200 vs 17 units
+6,non_match,y,different addresses and county names; 191 vs 11 units
+7,non_match,y,different county names (Elux at Norterra vs Horizon North)
+8,non_match,y,different county names and addresses
+9,non_match,y,different county names; 232 vs 15 units
+10,non_match,n,only shared word is Papago; 1025 vs 1031 N 48th St same side 101 m; 104 vs 17 units; APNs disagree
+11,non_match,y,different county names and addresses
+14,non_match,y,county names differ (Residences at Kierland vs Soltra at Kierland)
+15,non_match,y,county names differ (Isle at Arrowhead Ranch vs Strayhorse)
+17,non_match,n,opposite sides of E Thomas Rd (1350 vs 1335) 44 m; 130 vs 26 units; APNs disagree
+18,non_match,y,county names differ; 454 m
+19,non_match,y,county names differ (LinQ vs Haven at South Mountain); years 2022 vs 1986
+31,match,n,shared APNs and identical 736 county units; rent tracker lacks the 'II' - phase question
+44,match,n,corner of 25th St and Greenway Rd 51 m; sold comp county names Greenway Landing South / Alderwood; rent side has no parcel match
+53,non_match,n,opposite sides of E Apache Blvd (1100 vs 1111) 131 m
+86,non_match,n,opposite sides of E Taylor St (5350 vs 5343) 120 m
+90,match,y,same address 1701 E 8th St - rename
+93,non_match,n,3001 vs 3007 N Black Canyon Hwy 143 m; no shared evidence beyond the street
+95,non_match,y,different streets
+98,match,n,sold comp is condo unit #134 inside the same building - policy: does a unit sale link to the community?
+104,non_match,y,opposite sides of W Cortez St
+105,match,n,sold comp is condo unit #118 inside the same building - same policy question as #134
+109,non_match,y,opposite sides of N 31st St
+112,non_match,n,16437 vs 16243 N 31st St same side 103 m; 16 units on the sold comp
+113,non_match,y,different streets; sold comp county name Gran Limon
+114,non_match,y,opposite sides of N 26th St
+116,match,n,815 vs 825 E Bethany Home Rd same side 125 m; 211 units; possible rename of Daybreak Place
+118,match,y,shared APN; identical 236 county units; county name Flats @ 2030 on both sides - rename
+119,match,y,same address 740 W University Dr - rename
+120,match,y,same address 120 W Dobbins Rd - rename
+121,non_match,y,senior living vs garden apartments; 5848 vs 5925
+123,match,y,same address 7611 S 36th St - rename
+124,match,n,sold comp is condo unit #105 at the same address - unit-sale policy
+128,non_match,y,different streets
+130,non_match,n,2950 E Greenway Rd vs 15417 N 29th St 65 m - adjacent corner parcels?
+131,match,y,same address 2122 W Butler Dr - rename
+135,match,n,2930 vs 2950 N 46th St same side 128 m; possible rename of The Marlowe
+137,non_match,y,different streets; sold comp is 26 units built 2016
+141,non_match,y,815 vs 749 E Maryland Ave
+144,non_match,n,525 W Lakeside Dr vs 500 W 1st St 89 m; both 2017-era Town Lake product
+152,match,y,same address 5020 W Peoria Ave - rename
+156,match,y,same address 1505 N Country Club Dr - rename
+157,match,n,17017 N 12th St vs 1100 E Bell Rd 134 m (same corner); sold comp 306 units built 2017
+160,non_match,y,different streets
+162,non_match,y,454 m different streets
+163,non_match,y,403 m different streets
+164,non_match,y,county names differ
+165,non_match,y,436 m; Westmount vs Rise
+167,non_match,y,county names differ
+169,non_match,y,different streets
+173,non_match,y,different streets
+176,non_match,y,403 m different streets
+178,non_match,y,6515 vs 6405 W McDowell 257 m
+179,non_match,y,6231 vs 6161 W McDowell 238 m
+181,match,n,identical distinctive name Seventeen 805; addresses 17805 N 40th St vs 18002 N 40th Pl 282 m
+185,non_match,y,Legacy vs 1010 on Main
+186,match,y,identical distinctive name ReNew Biltmore; different street addresses 163 m (corner parcel?) (lean taken per Herman 2026-11-23: decide clear leans)
+188,non_match,y,461 m different streets
+190,non_match,y,496 m different streets
+191,non_match,y,Orangewood Place vs Lemon Grove Place 228 m
+192,non_match,y,Gracie's Village vs Aces on Apache 237 m
+193,non_match,y,Riverside vs Lakeside Drive 189 m
+194,non_match,y,336 m different street
+195,non_match,y,Optima vs Overture Kierland
+197,non_match,y,county names differ (Vue 1901)
+198,non_match,y,Metro on Main vs Legacy on Main II
+199,non_match,y,county names differ

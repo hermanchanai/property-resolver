@@ -1,0 +1,7 @@
+event,canonical_id,other_ids,n_members
+merge,prop_527242e806fb,prop_527242e806fb;prop_69bf2d9f9829,3
+merge,prop_910e75a2a79b,prop_35fcad76700e;prop_910e75a2a79b,3
+merge,prop_cbcc56290bd3,prop_ad3d84ed82d3;prop_cbcc56290bd3,3
+split,prop_35fcad76700e,prop_35fcad76700e;prop_910e75a2a79b,3
+split,prop_69bf2d9f9829,prop_527242e806fb;prop_69bf2d9f9829,3
+split,prop_ad3d84ed82d3,prop_ad3d84ed82d3;prop_cbcc56290bd3,4

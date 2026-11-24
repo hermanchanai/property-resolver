@@ -1,0 +1,552 @@
+{
+  "PHX_tune": {
+    "claude-haiku-5-5": {
+      "market": "PHX",
+      "split": "tune",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-haiku-5-5",
+      "n_labeled": 150,
+      "n_positive": 83,
+      "label_sources": {
+        "rule_draft": 98,
+        "manual_draft": 39,
+        "herman": 13
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.687,
+            "f1": 0.814,
+            "tp": 57.0,
+            "fp": 0.0,
+            "fn": 26.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.507,
+            "f1": 0.673,
+            "tp": 433.9,
+            "fp": 0.0,
+            "fn": 422.4
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.988,
+            "recall": 0.952,
+            "f1": 0.969,
+            "tp": 79.0,
+            "fp": 1.0,
+            "fn": 4.0
+          },
+          "pop_weighted": {
+            "precision": 0.992,
+            "recall": 0.975,
+            "f1": 0.983,
+            "tp": 834.7,
+            "fp": 7.0,
+            "fn": 21.6
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.94,
+            "f1": 0.969,
+            "tp": 78.0,
+            "fp": 0.0,
+            "fn": 5.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.967,
+            "f1": 0.983,
+            "tp": 827.7,
+            "fp": 0.0,
+            "fn": 28.6
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.786,
+        "recall": 0.846,
+        "f1": 0.815,
+        "tp": 22.0,
+        "fp": 6.0,
+        "fn": 4.0,
+        "n": 93
+      },
+      "llm_residue": {
+        "candidate_pairs": 4110,
+        "sent_to_llm": 197,
+        "share": 0.0479,
+        "usd_for_residue": 0.0404,
+        "usd_all_calls_incl_eval": 0.0624,
+        "labeled_pairs_in_band": 14
+      }
+    },
+    "claude-sonnet-5-5": {
+      "market": "PHX",
+      "split": "tune",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-sonnet-5-5",
+      "n_labeled": 150,
+      "n_positive": 83,
+      "label_sources": {
+        "rule_draft": 98,
+        "manual_draft": 39,
+        "herman": 13
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.687,
+            "f1": 0.814,
+            "tp": 57.0,
+            "fp": 0.0,
+            "fn": 26.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.507,
+            "f1": 0.673,
+            "tp": 433.9,
+            "fp": 0.0,
+            "fn": 422.4
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.988,
+            "recall": 0.952,
+            "f1": 0.969,
+            "tp": 79.0,
+            "fp": 1.0,
+            "fn": 4.0
+          },
+          "pop_weighted": {
+            "precision": 0.992,
+            "recall": 0.975,
+            "f1": 0.983,
+            "tp": 834.7,
+            "fp": 7.0,
+            "fn": 21.6
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.94,
+            "f1": 0.969,
+            "tp": 78.0,
+            "fp": 0.0,
+            "fn": 5.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.967,
+            "f1": 0.983,
+            "tp": 827.7,
+            "fp": 0.0,
+            "fn": 28.6
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.92,
+        "recall": 0.885,
+        "f1": 0.902,
+        "tp": 23.0,
+        "fp": 2.0,
+        "fn": 3.0,
+        "n": 93
+      },
+      "llm_residue": {
+        "candidate_pairs": 4110,
+        "sent_to_llm": 197,
+        "share": 0.0479,
+        "usd_for_residue": 0.401,
+        "usd_all_calls_incl_eval": 0.62,
+        "labeled_pairs_in_band": 14
+      }
+    }
+  },
+  "PHX_holdout": {
+    "claude-haiku-5-5": {
+      "market": "PHX",
+      "split": "holdout",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-haiku-5-5",
+      "n_labeled": 50,
+      "n_positive": 22,
+      "label_sources": {
+        "rule_draft": 32,
+        "manual_draft": 14,
+        "herman": 4
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.636,
+            "f1": 0.778,
+            "tp": 14.0,
+            "fp": 0.0,
+            "fn": 8.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.693,
+            "f1": 0.819,
+            "tp": 115.0,
+            "fp": 0.0,
+            "fn": 51.0
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.955,
+            "recall": 0.955,
+            "f1": 0.955,
+            "tp": 21.0,
+            "fp": 1.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 0.967,
+            "recall": 0.958,
+            "f1": 0.963,
+            "tp": 159.1,
+            "fp": 5.4,
+            "fn": 7.0
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 0.955,
+            "recall": 0.955,
+            "f1": 0.955,
+            "tp": 21.0,
+            "fp": 1.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 0.967,
+            "recall": 0.958,
+            "f1": 0.963,
+            "tp": 159.1,
+            "fp": 5.4,
+            "fn": 7.0
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 8.0,
+        "fp": 4.0,
+        "fn": 0.0,
+        "n": 36
+      },
+      "llm_residue": {
+        "candidate_pairs": 4110,
+        "sent_to_llm": 197,
+        "share": 0.0479,
+        "usd_for_residue": 0.0404,
+        "usd_all_calls_incl_eval": 0.0624,
+        "labeled_pairs_in_band": 6
+      }
+    },
+    "claude-sonnet-5-5": {
+      "market": "PHX",
+      "split": "holdout",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-sonnet-5-5",
+      "n_labeled": 50,
+      "n_positive": 22,
+      "label_sources": {
+        "rule_draft": 32,
+        "manual_draft": 14,
+        "herman": 4
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.636,
+            "f1": 0.778,
+            "tp": 14.0,
+            "fp": 0.0,
+            "fn": 8.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.693,
+            "f1": 0.819,
+            "tp": 115.0,
+            "fp": 0.0,
+            "fn": 51.0
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.955,
+            "recall": 0.955,
+            "f1": 0.955,
+            "tp": 21.0,
+            "fp": 1.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 0.967,
+            "recall": 0.958,
+            "f1": 0.963,
+            "tp": 159.1,
+            "fp": 5.4,
+            "fn": 7.0
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.955,
+            "f1": 0.977,
+            "tp": 21.0,
+            "fp": 0.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.958,
+            "f1": 0.979,
+            "tp": 159.1,
+            "fp": 0.0,
+            "fn": 7.0
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.889,
+        "recall": 1.0,
+        "f1": 0.941,
+        "tp": 8.0,
+        "fp": 1.0,
+        "fn": 0.0,
+        "n": 36
+      },
+      "llm_residue": {
+        "candidate_pairs": 4110,
+        "sent_to_llm": 197,
+        "share": 0.0479,
+        "usd_for_residue": 0.401,
+        "usd_all_calls_incl_eval": 0.62,
+        "labeled_pairs_in_band": 6
+      }
+    }
+  },
+  "TPA_test": {
+    "claude-haiku-5-5": {
+      "market": "TPA",
+      "split": "test",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-haiku-5-5",
+      "n_labeled": 52,
+      "n_positive": 31,
+      "label_sources": {
+        "manual_draft": 50,
+        "herman": 2
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.806,
+            "f1": 0.893,
+            "tp": 25.0,
+            "fp": 0.0,
+            "fn": 6.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.588,
+            "f1": 0.741,
+            "tp": 268.9,
+            "fp": 0.0,
+            "fn": 188.3
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.769,
+            "recall": 0.968,
+            "f1": 0.857,
+            "tp": 30.0,
+            "fp": 9.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 0.747,
+            "recall": 0.99,
+            "f1": 0.851,
+            "tp": 452.4,
+            "fp": 153.6,
+            "fn": 4.7
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 0.939,
+            "recall": 1.0,
+            "f1": 0.969,
+            "tp": 31.0,
+            "fp": 2.0,
+            "fn": 0.0
+          },
+          "pop_weighted": {
+            "precision": 0.888,
+            "recall": 1.0,
+            "f1": 0.941,
+            "tp": 457.1,
+            "fp": 57.4,
+            "fn": 0.0
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.857,
+        "tp": 6.0,
+        "fp": 2.0,
+        "fn": 0.0,
+        "n": 27
+      },
+      "llm_residue": {
+        "candidate_pairs": 1617,
+        "sent_to_llm": 92,
+        "share": 0.0569,
+        "usd_for_residue": 0.0173,
+        "usd_all_calls_incl_eval": 0.0186,
+        "labeled_pairs_in_band": 16
+      }
+    },
+    "claude-sonnet-5-5": {
+      "market": "TPA",
+      "split": "test",
+      "threshold": 0.11,
+      "band": [
+        0.02,
+        0.9
+      ],
+      "llm_model": "claude-sonnet-5-5",
+      "n_labeled": 52,
+      "n_positive": 31,
+      "label_sources": {
+        "manual_draft": 50,
+        "herman": 2
+      },
+      "excluded_unlabeled": 0,
+      "layers": {
+        "L1": {
+          "raw": {
+            "precision": 1.0,
+            "recall": 0.806,
+            "f1": 0.893,
+            "tp": 25.0,
+            "fp": 0.0,
+            "fn": 6.0
+          },
+          "pop_weighted": {
+            "precision": 1.0,
+            "recall": 0.588,
+            "f1": 0.741,
+            "tp": 268.9,
+            "fp": 0.0,
+            "fn": 188.3
+          }
+        },
+        "L1+L2": {
+          "raw": {
+            "precision": 0.769,
+            "recall": 0.968,
+            "f1": 0.857,
+            "tp": 30.0,
+            "fp": 9.0,
+            "fn": 1.0
+          },
+          "pop_weighted": {
+            "precision": 0.747,
+            "recall": 0.99,
+            "f1": 0.851,
+            "tp": 452.4,
+            "fp": 153.6,
+            "fn": 4.7
+          }
+        },
+        "L1+L2+L3": {
+          "raw": {
+            "precision": 0.912,
+            "recall": 1.0,
+            "f1": 0.954,
+            "tp": 31.0,
+            "fp": 3.0,
+            "fn": 0.0
+          },
+          "pop_weighted": {
+            "precision": 0.879,
+            "recall": 1.0,
+            "f1": 0.935,
+            "tp": 457.1,
+            "fp": 63.0,
+            "fn": 0.0
+          }
+        }
+      },
+      "llm_alone_on_unsettled": {
+        "precision": 0.667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "tp": 6.0,
+        "fp": 3.0,
+        "fn": 0.0,
+        "n": 27
+      },
+      "llm_residue": {
+        "candidate_pairs": 1617,
+        "sent_to_llm": 92,
+        "share": 0.0569,
+        "usd_for_residue": 0.1834,
+        "usd_all_calls_incl_eval": 0.205,
+        "labeled_pairs_in_band": 16
+      }
+    }
+  }
+}

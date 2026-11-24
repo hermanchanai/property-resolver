@@ -1,0 +1,61 @@
+{
+  "run_id": "20261123T175936Z",
+  "params": {
+    "threshold": 0.11,
+    "band": [
+      0.02,
+      0.9
+    ],
+    "llm_model": "claude-haiku-5-5",
+    "markets": [
+      "PHX",
+      "TPA"
+    ]
+  },
+  "stats": {
+    "PHX": {
+      "canonical_properties": 3292,
+      "members_by_source": {
+        "rent_community": 2783,
+        "county_parcel": 2306,
+        "permit": 2264,
+        "sold_property": 1231
+      },
+      "rent_sold_edges_by_layer": {
+        "L1_apn": 533,
+        "L2_splink": 118,
+        "L3_llm": 70
+      },
+      "sold_with_extra_rent_edges_dropped": 29,
+      "refused_merges_chaining_guard": {
+        "sold_parcel": 6
+      },
+      "rent_linked_to_sold": 721,
+      "component_size_max": 252
+    },
+    "TPA": {
+      "canonical_properties": 2235,
+      "members_by_source": {
+        "county_parcel": 8942,
+        "sold_property": 1332,
+        "rent_community": 1199
+      },
+      "rent_sold_edges_by_layer": {
+        "L1_apn": 274,
+        "L3_llm": 11,
+        "L2_splink": 10
+      },
+      "sold_with_extra_rent_edges_dropped": 17,
+      "refused_merges_chaining_guard": {
+        "sold_parcel": 4
+      },
+      "rent_linked_to_sold": 295,
+      "component_size_max": 954
+    }
+  },
+  "merge_log": {
+    "merge": 3,
+    "split": 3
+  },
+  "rows": 20057
+}
